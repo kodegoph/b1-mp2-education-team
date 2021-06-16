@@ -28,7 +28,21 @@ const LineChart = () => {
       }}
       width={50}
       height={50}
-      options={{ maintainAspectRatio: false }}
+      options={{
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtzero: true,
+                callback: function (data) {
+                  return data + "hr";
+                },
+              },
+            },
+          ],
+        },
+      }}
     />
   );
 };

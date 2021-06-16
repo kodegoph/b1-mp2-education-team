@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
-import LineChart from "../../components/LineChart";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import LineChart from "../components/Chart/LineChart";
 
 function clickAlert() {
   alert("I am working");
@@ -25,102 +25,104 @@ function overview() {
           <div className="w-full md:mb-6 mb-8">
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 mb-8 md:mb-0">
-                <div className="mb-5 text-center md:text-left ">
+                <div className="mb-5 text-center md:text-left md:pl-4 ">
                   <h1 className="text-xl font-bold">Hello, Student</h1>
                 </div>
-                <div className="flex flex-wrap card-1 mx-auto">
-                  <div className="w-full lg:w-8/12">
+                <div className="flex flex-wrap bg-gray-100 rounded-xl mx-auto">
+                  <div className="w-full lg:w-8/12 p-4">
                     <LineChart />
                   </div>
                   <div className="w-full lg:w-4/12">
                     <div className="py-8 px-8">
-                      <div className="summary-bg flex py-6 px-6">
+                      <div className="bg-gray-100 border border-gray-200 rounded-xl flex py-6 px-6">
                         <div className="w-full lg:w-8/12">
-                          <div className="text-sm leading-4 font-bold mb-5">
-                            <span>Summary</span>
-                          </div>
-                          <div className="summary__course">
-                            <div className="flex items-center mb-5">
-                              <span className="summary__icon mr-3">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="22"
-                                  height="22"
-                                  fill="#8EEAFF"
-                                  class="bi bi-journal-bookmark"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
-                                  />
-                                  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                                  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                                </svg>
-                              </span>
-                              <div className="flex flex-col">
-                                <span className="font-bold leading-4 text-sm">
-                                  53
+                          <div classname="flex justify-center flex-row">
+                            <div className="text-sm leading-4 font-bold mb-5">
+                              <span>Summary</span>
+                            </div>
+                            <div>
+                              <div className="flex items-center mb-5">
+                                <span className="bg-green-50 p-2 rounded mr-3">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="22"
+                                    height="22"
+                                    fill="#8EEAFF"
+                                    class="bi bi-journal-bookmark"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
+                                    />
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                                  </svg>
                                 </span>
-                                <span className="text-xs leading-3 text-gray-500">
-                                  Course
-                                </span>
+                                <div className="flex flex-col">
+                                  <span className="font-bold leading-4 text-sm">
+                                    53
+                                  </span>
+                                  <span className="text-xs leading-3 text-gray-500">
+                                    Course
+                                  </span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="summary__course flex">
-                            <div className="flex items-center mb-5">
-                              <span className="summary__icon-clock mr-3 ">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="22"
-                                  height="22"
-                                  fill="#3E9AEF"
-                                  class="bi bi-clock-history"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
-                                </svg>
-                              </span>
-                              <div className="flex flex-col">
-                                <span className="font-bold leading-4 text-sm">
-                                  88
+                            <div className="flex">
+                              <div className="flex items-center mb-5">
+                                <span className="bg-blue-100 p-2 rounded mr-3 ">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="22"
+                                    height="22"
+                                    fill="#3E9AEF"
+                                    class="bi bi-clock-history"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                    <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                    <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                  </svg>
                                 </span>
-                                <span className="text-xs leading-3 text-gray-500">
-                                  Time
-                                </span>
+                                <div className="flex flex-col">
+                                  <span className="font-bold leading-4 text-sm">
+                                    88
+                                  </span>
+                                  <span className="text-xs leading-3 text-gray-500">
+                                    Time
+                                  </span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="summary__course flex">
-                            <div className="flex items-center">
-                              <span className="summary__icon-exam mr-3">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="22"
-                                  height="22"
-                                  fill=" #59228D"
-                                  class="bi bi-book"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-                                </svg>
-                              </span>
-                              <div className="flex flex-col">
-                                <span className="font-bold leading-4 text-sm">
-                                  25
+                            <div className="flex">
+                              <div className="flex items-center">
+                                <span className="bg-purple-100 p-2 rounded mr-3">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="22"
+                                    height="22"
+                                    fill=" #59228D"
+                                    class="bi bi-book"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                                  </svg>
                                 </span>
-                                <span className="text-xs leading-3 text-gray-500">
-                                  Exam
-                                </span>
+                                <div className="flex flex-col">
+                                  <span className="font-bold leading-4 text-sm">
+                                    25
+                                  </span>
+                                  <span className="text-xs leading-3 text-gray-500">
+                                    Exam
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div className="w-full lg:w-4/12">
-                          <div>
+                          <div className="flex flex-col items-center ">
                             <span className="flex mb-8">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +198,7 @@ function overview() {
                 </div>
               </div>
               <div className="w-full lg:w-4/12">
-                <div className=" card-1">
+                <div className=" bg-gray-100 rounded-xl">
                   <div className="flex">
                     <div className="w-full py-6 px-8">
                       <div className="flex justify-between">
@@ -225,7 +227,7 @@ function overview() {
                       <div className="interior-design flex items-center mb-8">
                         <img
                           className="mr-3"
-                          src="/img/interior-image.svg"
+                          src="/img/course-interior.svg"
                           alt=""
                         />
                         <div className="flex flex-col mr-auto">
@@ -252,7 +254,7 @@ function overview() {
                       <div className="illustration flex items-center mb-8">
                         <img
                           className="mr-3"
-                          src="/img/illu-image.svg"
+                          src="/img/course-illustration.svg"
                           alt=""
                         />
                         <div className="flex flex-col mr-auto">
@@ -279,7 +281,7 @@ function overview() {
                       <div className="programming flex items-center">
                         <img
                           className="mr-3"
-                          src="/img/program-image.svg"
+                          src="/img/course-programming.svg"
                           alt=""
                         />
                         <div className="flex flex-col mr-auto">
@@ -314,7 +316,7 @@ function overview() {
               <div className="w-full lg:w-8/12 md:pr-6 ">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-6/12 md:pr-6 mb-8 md:mb-0">
-                    <div className="card-1 p-4">
+                    <div className="bg-gray-100 rounded-xl p-4">
                       <div className=" bg-gray-700 py-36 w-full h-full rounded-3xl"></div>
                       <div></div>
                     </div>
@@ -355,7 +357,7 @@ function overview() {
                     </div>
                   </div>
                   <div className="w-full lg:w-6/12 mb-8 md:mb-0">
-                    <div className="card-1 py-5 px-3 md:px-8 md:py-10">
+                    <div className="bg-gray-100 rounded-xl py-5 px-3 md:px-8 md:py-10">
                       <div className="flex justify-between">
                         <span className="text-base font-bold mb-7 ml-3 md:ml-3">
                           Leaderboard Ranking
@@ -402,7 +404,11 @@ function overview() {
                         <span className="mr-3 md:mr-14 ml-3 md:ml-3">1</span>
                         <div className="bg-white flex items-center justify-evenly py-1 px-2 rounded-3xl">
                           <span className="md:mr-4 mr-2">
-                            <img src="/img/contact-avatar.png" alt="" />
+                            <img
+                              className="w-10 h-10 w-full object-cover rounded-full"
+                              src="/img/user-1.jpg"
+                              alt=""
+                            />
                           </span>
                           <span className="md:mr-16 text-sm mr-8 font-bold">
                             Martin Braitwhite
@@ -416,9 +422,14 @@ function overview() {
                       </div>
                       <div className="flex items-center mb-6">
                         <span className="md:mr-16 mr-5 ml-3 md:ml-3">2</span>
-                        <span className="md:mr-4 mr-2">
-                          <img src="/img/contact-avatar.png" alt="" />
-                        </span>
+                        <span></span>
+                        <div className="md:mr-4 mr-2 ">
+                          <img
+                            className="w-10 h-10 w-full object-cover rounded-full"
+                            src="/img/user-2.jpg"
+                            alt=""
+                          />
+                        </div>
                         <span className="md:mr-20 mr-16 text-sm font-bold">
                           Jesse Lingard
                         </span>
@@ -429,7 +440,11 @@ function overview() {
                       <div className="flex items-center mb-10">
                         <span className="md:mr-14 mr-3 ml-3">3</span>
                         <span className="ml-2 md:mr-4 mr-2">
-                          <img src="/img/contact-avatar.png" alt="" />
+                          <img
+                            className="w-10 h-10 w-full object-cover rounded-full"
+                            src="/img/user-3.jpg"
+                            alt=""
+                          />
                         </span>
                         <span className="md:mr-24 mr-16 text-sm font-bold">
                           Hudson Odoi
@@ -450,7 +465,7 @@ function overview() {
 
               <div className="w-full lg:w-4/12">
                 <div>
-                  <div className="card-1 py-10 px-8">
+                  <div className="bg-gray-100 rounded-xl py-10 px-8">
                     <div className="flex justify-between">
                       <span className="text-lg font-bold leading-5 text-blue-900 mb-5">
                         Schedule
@@ -477,8 +492,10 @@ function overview() {
                           </svg>
                         </span>
                       </div>
-                      <div className="btn-bg-color">
-                        <a href="#">Class</a>
+                      <div className="bg-secondary inline-block rounded-3xl py-2 px-8">
+                        <a className="text-white" href="#">
+                          Class
+                        </a>
                       </div>
                     </div>
                     <div>
@@ -504,8 +521,10 @@ function overview() {
                           2:11 PM, January 30
                         </span>
                       </div>
-                      <div className="btn-bg-color-2">
-                        <a href="#">Meeting</a>
+                      <div className="inline-block rounded-3xl bg-primary hover:bg-primary-dark py-2 px-6">
+                        <a className="text-white" href="#">
+                          Meeting
+                        </a>
                       </div>
                     </div>
                   </div>
