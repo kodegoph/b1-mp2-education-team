@@ -26,13 +26,15 @@ function overview() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 mb-8 md:mb-0">
                 <div className="mb-5 text-center md:text-left md:pl-4 ">
-                  <h1 className="text-xl font-bold">Hello, Student</h1>
+                  <h1 className="text-xl font-bold fadeinleft ">
+                    Hello, Student
+                  </h1>
                 </div>
                 <div className="flex flex-wrap bg-gray-100 rounded-xl mx-auto">
-                  <div className="w-full lg:w-8/12 p-4">
+                  <div className="w-full lg:w-8/12 p-4 fadeintop ">
                     <LineChart />
                   </div>
-                  <div className="w-full lg:w-4/12">
+                  <div className="w-full lg:w-4/12 fadeintbot">
                     <div className="py-8 px-8">
                       <div className="bg-gray-100 border border-gray-200 rounded-xl flex py-6 px-6">
                         <div className="w-full lg:w-8/12">
@@ -197,7 +199,7 @@ function overview() {
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-4/12">
+              <div className="w-full lg:w-4/12 fadeinleft">
                 <div className=" bg-gray-100 rounded-xl">
                   <div className="flex">
                     <div className="w-full py-6 px-8">
@@ -251,7 +253,7 @@ function overview() {
                           </svg>
                         </div>
                       </div>
-                      <div className="illustration flex items-center mb-8">
+                      <div className="illustration flex items-center mb-8 ">
                         <img
                           className="mr-3"
                           src="/img/course-illustration.svg"
@@ -278,7 +280,7 @@ function overview() {
                           </svg>
                         </div>
                       </div>
-                      <div className="programming flex items-center">
+                      <div className="programming flex items-center ">
                         <img
                           className="mr-3"
                           src="/img/course-programming.svg"
@@ -315,9 +317,9 @@ function overview() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 ">
                 <div className="flex flex-wrap">
-                  <div className="w-full lg:w-6/12 md:pr-6 mb-28 md:mb-0 relative">
+                  <div className="w-full lg:w-6/12 md:pr-6 mb-28 md:mb-0 relative ">
                     <div className="bg-gray-100 rounded-xl p-4 ">
-                      <div className="   w-full h-full rounded-3xl ">
+                      <div className="   w-full h-full rounded-3xl fadeinleft">
                         <img
                           className="rounded-3xl "
                           src="/img/programming-exam.jpg"
@@ -326,7 +328,7 @@ function overview() {
                       </div>
                     </div>
 
-                    <div className="absolute -bottom-20 md:-bottom-0 -left-0 md:-left-3 w-full">
+                    <div className="absolute -bottom-20 md:-bottom-0 -left-0 md:-left-3 w-full fadeinleft">
                       <div className=" bg-white py-8 px-8 rounded-3xl mx-2 md:mx-4">
                         <div className="md:flex md:justify-evenly mb-4">
                           <div className="mb-4 md:mb-0 ">
@@ -364,9 +366,9 @@ function overview() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full lg:w-6/12 mb-8 md:mb-0">
-                    <div className="bg-gray-100 rounded-xl py-5 px-3 md:px-8 md:py-10">
-                      <div className="flex justify-between">
+                  <div className="w-full lg:w-6/12 mb-8 md:mb-0 ">
+                    <div className="bg-gray-100 rounded-xl py-5 px-3 md:px-8 md:py-10 ">
+                      <div className="flex justify-between fadeinleft">
                         <span className="text-base font-bold mb-7 ml-3 md:ml-3">
                           Leaderboard Ranking
                         </span>
@@ -397,7 +399,7 @@ function overview() {
                           </span>
                         </div>
                       </div>
-                      <div className="flex justify-between md:inline-block mb-4">
+                      <div className="flex justify-between md:inline-block mb-4 fadeinright">
                         <span className="text-gray-600 text-sm lg:mr-32 ml-3 md:ml-3">
                           No
                         </span>
@@ -408,9 +410,9 @@ function overview() {
                           Score
                         </span>
                       </div>
-                      <div className="flex items-center mb-6">
+                      <div className="flex items-center mb-6 fadeinleft">
                         <span className="mr-3 md:mr-14 ml-3 md:ml-3">1</span>
-                        <div className="bg-white flex items-center justify-evenly py-1 px-2 rounded-3xl">
+                        <div className="bg-white flex items-center justify-evenly py-1 px-2 rounded-3xl ">
                           <span className="md:mr-4 mr-2">
                             <img
                               className="w-10 h-10 w-full object-cover rounded-full"
@@ -428,7 +430,7 @@ function overview() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center mb-6">
+                      <div className="flex items-center mb-6   fadeinright">
                         <span className="md:mr-16 mr-5 ml-3 md:ml-3">2</span>
                         <span></span>
                         <div className="md:mr-4 mr-2 ">
@@ -445,7 +447,7 @@ function overview() {
                           532 points
                         </span>
                       </div>
-                      <div className="flex items-center mb-10">
+                      <div className="flex items-center mb-10 fadeinleft">
                         <span className="md:mr-14 mr-3 ml-3">3</span>
                         <span className="ml-2 md:mr-4 mr-2">
                           <img
@@ -461,7 +463,7 @@ function overview() {
                           441 points
                         </span>
                       </div>
-                      <div className="text-center">
+                      <div className="text-center fadeinright">
                         <a className="text-primary" href="">
                           See All Rank
                         </a>
@@ -471,7 +473,7 @@ function overview() {
                 </div>
               </div>
 
-              <div className="w-full lg:w-4/12">
+              <div className="w-full lg:w-4/12 fadeinright">
                 <div>
                   <div className="bg-gray-100 rounded-xl py-10 px-8">
                     <div className="flex justify-between">
