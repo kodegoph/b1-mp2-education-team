@@ -29,6 +29,7 @@ const LineChart = () => {
       width={50}
       height={50}
       options={{
+        position: "bottom",
         maintainAspectRatio: false,
         scales: {
           yAxes: [

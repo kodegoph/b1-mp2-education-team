@@ -315,7 +315,7 @@ function overview() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 ">
                 <div className="flex flex-wrap">
-                  <div className="w-full lg:w-6/12 md:pr-6 mb-8 md:mb-0 relative">
+                  <div className="w-full lg:w-6/12 md:pr-6 mb-28 md:mb-0 relative">
                     <div className="bg-gray-100 rounded-xl p-4 ">
                       <div className="   w-full h-full rounded-3xl ">
                         <img
@@ -326,8 +326,8 @@ function overview() {
                       </div>
                     </div>
 
-                    <div className="absolute bottom-0 -left-3 w-full">
-                      <div className=" bg-white py-8 px-8 rounded-3xl mx-5">
+                    <div className="absolute -bottom-20 md:-bottom-0 -left-0 md:-left-3 w-full">
+                      <div className=" bg-white py-8 px-8 rounded-3xl mx-2 md:mx-4">
                         <div className="md:flex md:justify-evenly mb-4">
                           <div className="mb-4 md:mb-0 ">
                             <span className="text-xl font-bold ">
