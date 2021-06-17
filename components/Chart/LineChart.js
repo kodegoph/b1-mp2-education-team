@@ -36,8 +36,8 @@ const LineChart = () => {
             {
               ticks: {
                 beginAtzero: true,
-                callback: function (data) {
-                  return data + "hr";
+                callback: function (data, label, labels) {
+                  return data + label + "HR";
                 },
               },
             },

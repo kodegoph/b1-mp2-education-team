@@ -12,11 +12,11 @@ function overview() {
     <div>
       <Head>
         <title>Edu | Overview</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <Header toggleSidebar={clickAlert}></Header>
       <Sidebar></Sidebar>
@@ -26,53 +26,95 @@ function overview() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 mb-8 md:mb-0">
                 <div className="mb-5 text-center md:text-left md:pl-4 ">
-                  <h1 className="text-xl font-bold fadeinleft ">
+                  <h1 className="text-xl font-bold fadeintop">
                     Hello, Student
                   </h1>
                 </div>
                 <div className="flex flex-wrap bg-gray-100 rounded-xl mx-auto">
-                  <div className="w-full lg:w-8/12 p-4 fadeintop ">
+                  <div className="w-full lg:w-8/12 p-4 fadeintop">
                     <LineChart />
                   </div>
-                  <div className="w-full lg:w-4/12 fadeintbot">
-                    <div className="py-8 px-8">
+                  <div className="w-full lg:w-4/12">
+                    <div className="py-8 px-8 fadeintop">
                       <div className="bg-gray-100 border border-gray-200 rounded-xl flex py-6 px-6">
-                        <div className="w-full lg:w-8/12">
-                          <div classname="flex justify-center flex-row">
-                            <div className="text-sm leading-4 font-bold mb-5">
-                              <span>Summary</span>
-                            </div>
-                            <div>
-                              <div className="flex items-center mb-5">
-                                <span className="bg-green-50 p-2 rounded mr-3">
+                        <div className="w-full lg:w-12/12">
+                          <div classname="flex justify-center flex-row ">
+                            <div className="text-sm leading-4 font-bold ">
+                              <div className="flex  justify-between">
+                                <span>Summary</span>
+                                <span className="flex mb-8">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="22"
-                                    height="22"
-                                    fill="#8EEAFF"
-                                    class="bi bi-journal-bookmark"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="bi bi-dot"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                  </svg>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="bi bi-dot"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                            <div>
+                              <div className="flex items-center justify-between mb-5">
+                                <div className="flex items-center">
+                                  <span className="bg-green-50 p-2 rounded mr-3">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="22"
+                                      height="22"
+                                      fill="#8EEAFF"
+                                      class="bi bi-journal-bookmark"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
+                                      />
+                                      <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                                      <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                                    </svg>
+                                  </span>
+                                  <div className="flex flex-col">
+                                    <span className="font-bold leading-4 text-sm">
+                                      53
+                                    </span>
+                                    <span className="text-xs leading-3 text-gray-500">
+                                      Course
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="chevron-right">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-right"
                                     viewBox="0 0 16 16"
                                   >
                                     <path
                                       fill-rule="evenodd"
-                                      d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
+                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                                     />
-                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
                                   </svg>
-                                </span>
-                                <div className="flex flex-col">
-                                  <span className="font-bold leading-4 text-sm">
-                                    53
-                                  </span>
-                                  <span className="text-xs leading-3 text-gray-500">
-                                    Course
-                                  </span>
                                 </div>
                               </div>
                             </div>
-                            <div className="flex">
-                              <div className="flex items-center mb-5">
+
+                            <div className="flex items-center justify-between mb-5">
+                              <div className="flex items-center">
                                 <span className="bg-blue-100 p-2 rounded mr-3 ">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -87,17 +129,35 @@ function overview() {
                                     <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
                                   </svg>
                                 </span>
-                                <div className="flex flex-col">
-                                  <span className="font-bold leading-4 text-sm">
-                                    88
-                                  </span>
-                                  <span className="text-xs leading-3 text-gray-500">
-                                    Time
-                                  </span>
+                                <div className="flex justify-evenly">
+                                  <div className="flex flex-col">
+                                    <span className="font-bold leading-4 text-sm">
+                                      88
+                                    </span>
+                                    <span className="text-xs leading-3 text-gray-500">
+                                      Time
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
+                              <div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="20"
+                                  height="20"
+                                  fill="currentColor"
+                                  class="bi bi-chevron-right"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                  />
+                                </svg>
+                              </div>
                             </div>
-                            <div className="flex">
+
+                            <div className="flex items-center justify-between">
                               <div className="flex items-center">
                                 <span className="bg-purple-100 p-2 rounded mr-3">
                                   <svg
@@ -111,86 +171,32 @@ function overview() {
                                     <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                                   </svg>
                                 </span>
-                                <div className="flex flex-col">
-                                  <span className="font-bold leading-4 text-sm">
-                                    25
-                                  </span>
-                                  <span className="text-xs leading-3 text-gray-500">
-                                    Exam
-                                  </span>
+                                <div className="flex  items-center">
+                                  <div className="flex flex-col">
+                                    <span className="font-bold leading-4 text-sm">
+                                      25
+                                    </span>
+                                    <span className="text-xs leading-3 text-gray-500">
+                                      Exam
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="w-full lg:w-4/12">
-                          <div className="flex flex-col items-center ">
-                            <span className="flex mb-8">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="bi bi-dot"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="bi bi-dot"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                              </svg>
-                            </span>
-                            <div className="chevron-right pl-4 mb-10">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="bi bi-chevron-right"
-                                viewBox="0 0 16 16"
-                              >
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                />
-                              </svg>
-                            </div>
-                            <div className="chevron-right pl-4 mb-9">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="bi bi-chevron-right"
-                                viewBox="0 0 16 16"
-                              >
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                />
-                              </svg>
-                            </div>
-                            <div className="chevron-right pl-4">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="bi bi-chevron-right"
-                                viewBox="0 0 16 16"
-                              >
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                />
-                              </svg>
+                              <div className="chevron-right ">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="20"
+                                  height="20"
+                                  fill="currentColor"
+                                  class="bi bi-chevron-right"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -199,10 +205,10 @@ function overview() {
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-4/12 fadeinleft">
+              <div className="w-full lg:w-4/12 ">
                 <div className=" bg-gray-100 rounded-xl">
-                  <div className="flex">
-                    <div className="w-full py-6 px-8">
+                  <div className="flex fadeintop">
+                    <div className="w-full py-8 px-8">
                       <div className="flex justify-between">
                         <span className="text-lg font-bold mb-8 ">
                           Course Active
@@ -317,9 +323,9 @@ function overview() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 md:pr-6 ">
                 <div className="flex flex-wrap">
-                  <div className="w-full lg:w-6/12 md:pr-6 mb-28 md:mb-0 relative ">
-                    <div className="bg-gray-100 rounded-xl p-4 ">
-                      <div className="   w-full h-full rounded-3xl fadeinleft">
+                  <div className="w-full lg:w-6/12 md:pr-6 mb-20 md:mb-0 relative ">
+                    <div className="bg-gray-100 rounded-xl p-4 fadeintop">
+                      <div className="   w-full h-full rounded-3xl ">
                         <img
                           className="rounded-3xl "
                           src="/img/programming-exam.jpg"
@@ -328,22 +334,22 @@ function overview() {
                       </div>
                     </div>
 
-                    <div className="absolute -bottom-20 md:-bottom-0 -left-0 md:-left-3 w-full fadeinleft">
-                      <div className=" bg-white py-8 px-8 rounded-3xl mx-2 md:mx-4">
-                        <div className="md:flex md:justify-evenly mb-4">
-                          <div className="mb-4 md:mb-0 ">
+                    <div className="absolute -bottom-10 md:-bottom-0 -left-0 md:-left-3 w-full ">
+                      <div className=" bg-white px-8 py-4 rounded-3xl mx-2 md:mx-4 fadeintop">
+                        <div className="md:flex md:justify-between mb-2">
+                          <div className=" md:mb-0 ">
                             <span className="text-xl font-bold ">
                               Programming - Exam
                             </span>
                           </div>
-                          <div className="mb-4 md:mb-0">
+                          <div className=" md:mb-0 md:mt-4">
                             <span className="md:pt-4 text-yellow-400 text-sm">
                               Details
                             </span>
                           </div>
                         </div>
                         <div className="flex">
-                          <div className="md:ml-16 mr-2">
+                          <div className=" mr-2">
                             <span>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -366,9 +372,9 @@ function overview() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full lg:w-6/12 mb-8 md:mb-0 ">
-                    <div className="bg-gray-100 rounded-xl py-5 px-3 md:px-8 md:py-10 ">
-                      <div className="flex justify-between fadeinleft">
+                  <div className="w-full lg:w-6/12 mb-8 md:mb-0">
+                    <div className="bg-gray-100 rounded-xl py-5 px-3 md:px-8 md:py-10 fadeintop">
+                      <div className="flex justify-between ">
                         <span className="text-base font-bold mb-7 ml-3 md:ml-3">
                           Leaderboard Ranking
                         </span>
@@ -399,7 +405,7 @@ function overview() {
                           </span>
                         </div>
                       </div>
-                      <div className="flex justify-between md:inline-block mb-4 fadeinright">
+                      <div className="flex justify-between md:inline-block mb-4 ">
                         <span className="text-gray-600 text-sm lg:mr-32 ml-3 md:ml-3">
                           No
                         </span>
@@ -410,7 +416,7 @@ function overview() {
                           Score
                         </span>
                       </div>
-                      <div className="flex items-center mb-6 fadeinleft">
+                      <div className="flex items-center mb-6 ">
                         <span className="mr-3 md:mr-14 ml-3 md:ml-3">1</span>
                         <div className="bg-white flex items-center justify-evenly py-1 px-2 rounded-3xl ">
                           <span className="md:mr-4 mr-2">
@@ -430,7 +436,7 @@ function overview() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center mb-6   fadeinright">
+                      <div className="flex items-center mb-6">
                         <span className="md:mr-16 mr-5 ml-3 md:ml-3">2</span>
                         <span></span>
                         <div className="md:mr-4 mr-2 ">
@@ -447,7 +453,7 @@ function overview() {
                           532 points
                         </span>
                       </div>
-                      <div className="flex items-center mb-10 fadeinleft">
+                      <div className="flex items-center mb-10">
                         <span className="md:mr-14 mr-3 ml-3">3</span>
                         <span className="ml-2 md:mr-4 mr-2">
                           <img
@@ -463,7 +469,7 @@ function overview() {
                           441 points
                         </span>
                       </div>
-                      <div className="text-center fadeinright">
+                      <div className="text-center ">
                         <a className="text-primary" href="">
                           See All Rank
                         </a>
@@ -473,7 +479,7 @@ function overview() {
                 </div>
               </div>
 
-              <div className="w-full lg:w-4/12 fadeinright">
+              <div className="w-full lg:w-4/12 fadeintop">
                 <div>
                   <div className="bg-gray-100 rounded-xl py-10 px-8">
                     <div className="flex justify-between">
