@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import LineChart from "../components/Chart/LineChart";
+import Sidebar from "../components/sidebar/Sidebar";
+import Header from "../components/header/Header";
+import LineChart from "../components/chart/LineChart";
 
 function clickAlert() {
   alert("I am working");
